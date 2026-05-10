@@ -23,7 +23,7 @@ function CopyPopup({ value, onClose }) {
     <div className="copy-popup">
       <span className="copy-popup-value">{value}</span>
       <button className="copy-popup-btn" onClick={handleCopy}>
-        {copied ? '✅ Copied!' : '📋 Copy'}
+        {copied ? '✅ Copied!' : '[=] Copy'}
       </button>
     </div>
   );
@@ -72,15 +72,15 @@ function ModalContent({ member, onClose }) {
         
         <div className="modal-info">
           <div className="modal-info-row">
-            <span className="modal-info-label">🎓 Year</span>
+            <span className="modal-info-label">[Edu] Year</span>
             <span className="modal-info-value">{member.year}</span>
           </div>
           <div className="modal-info-row">
-            <span className="modal-info-label">🔬 Branch</span>
+            <span className="modal-info-label">[Lab] Branch</span>
             <span className="modal-info-value">{member.branch}</span>
           </div>
           <div className="modal-info-row">
-            <span className="modal-info-label">📋 Section</span>
+            <span className="modal-info-label">[=] Section</span>
             <span className="modal-info-value">{member.section}</span>
           </div>
         </div>
@@ -88,7 +88,7 @@ function ModalContent({ member, onClose }) {
         
         {member.achievements && member.achievements.length > 0 && (
           <div className="modal-achievements">
-            <div className="modal-achievements-title">🏆 Achievements</div>
+            <div className="modal-achievements-title">[#1] Achievements</div>
             <ul className="modal-achievements-list">
               {member.achievements.map((ach, idx) => (
                 <li key={idx} className="modal-achievement-item">{ach}</li>
@@ -100,11 +100,11 @@ function ModalContent({ member, onClose }) {
         
         {member.testimonials && member.testimonials.length > 0 && (
           <div className="modal-testimonials">
-            <div className="modal-testimonials-title">💬 Testimonials</div>
+            <div className="modal-testimonials-title">[ ] Testimonials</div>
             <ul className="modal-testimonials-list">
               {member.testimonials.map((t, idx) => (
                 <li key={idx} className="modal-testimonial-item">
-                  <span className="testimonial-text">“{t.text}”</span>
+                  <span className="testimonial-text">�{t.text}�</span>
                   <span className="testimonial-author">- {t.author}</span>
                 </li>
               ))}
@@ -122,7 +122,7 @@ function ModalContent({ member, onClose }) {
                 rel="noopener noreferrer"
                 className="modal-social-btn btn-linkedin"
               >
-                🔗 LinkedIn
+                -> LinkedIn
               </a>
             )}
 
@@ -135,7 +135,7 @@ function ModalContent({ member, onClose }) {
                     setActivePopup(activePopup === 'whatsapp' ? null : 'whatsapp');
                   }}
                 >
-                  💬 WhatsApp
+                  [ ] WhatsApp
                 </button>
                 {activePopup === 'whatsapp' && (
                   <CopyPopup value={whatsappValue} onClose={() => setActivePopup(null)} />
@@ -150,7 +150,7 @@ function ModalContent({ member, onClose }) {
                 rel="noopener noreferrer"
                 className="modal-social-btn btn-instagram"
               >
-                📸 Instagram
+                [img] Instagram
               </a>
             )}
 
