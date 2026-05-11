@@ -251,7 +251,7 @@
 [data-theme="light"] .ns-nav-tab:hover  { color:var(--t1); }
 [data-theme="light"] .ns-nav-tab.active { color:#CC1111; }
 
-.ns-navbar-mobile { position:fixed; top:0; left:0; right:0; z-index:12010; background:rgba(5,5,8,.12); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid var(--bdr); padding:6px 0 4px; }
+.ns-navbar-mobile { position:fixed; top:0; left:0; right:0; z-index:12010; background:rgba(10,10,10,0.95); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); border-bottom:1px solid var(--bdr); padding:6px 0 4px; }
 [data-theme="light"] .ns-navbar-mobile {
   background: rgba(255,255,255,.12) !important;
   backdrop-filter: blur(40px) saturate(200%) !important;
@@ -260,7 +260,7 @@
 }
 .ns-mobile-top { display:flex; align-items:center; justify-content:center; gap:10px; padding:0 14px 5px; }
 .ns-mobile-logo-ns {
-  height: 42px; width: 42px; object-fit: contain;
+  height: 55px; width: auto; object-fit: contain;
   mix-blend-mode: normal;
   filter: drop-shadow(0 0 8px rgba(204,17,17,.6)) brightness(1.05);
 }

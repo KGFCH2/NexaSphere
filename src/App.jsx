@@ -428,6 +428,7 @@ export default function App() {
              {page.type === 'activity' && cur && <ActivityDetailPage activity={cur} onBack={onBackMain} onSelectEvent={onEvent}/>}
              {page.type === 'apply' && <RecruitmentPage onBack={onBackHome}/>}
              {page.type === 'join' && <MembershipPage onBack={onBackHome}/>}
+             {page.type === 'event' && page.event && <EventDetailPage event={page.event} onBack={page.activityKey ? onBackAct : onBackMain}/>}
              {/* 404 fallback for unknown page types */}
              {page.type && !['section','activity','event','apply','join'].includes(page.type) && <NotFoundPage onGoHome={onBackHome}/>}
            </PageIn>
