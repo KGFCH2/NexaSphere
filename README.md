@@ -119,7 +119,6 @@ nexasphere/
 │   ├── package.json
 │   ├── vite.config.js
 │   ├── vercel.json
-│   ├── netlify.toml
 │   └── index.html
 │
 └── README.md                        ← This File
